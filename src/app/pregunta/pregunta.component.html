@@ -1,0 +1,22 @@
+<div class="flex-container-dialog" id="containerDialog">
+    <div class="container-boton-close">
+        <button  class="boton-close" (click) = "closePregunta('volver')"></button>
+    </div>
+    <div class="flex-container-pregunta">
+        <div class="h1-flex-item">
+            <p id="idPregunta">{{pregunta}}</p>
+        </div>
+        <!-- <p class="p-texto-pregunta">{{pregunta}}</p> -->
+        <div class="flex-container-respuesta">
+            <ng-container *ngFor="let i = index; let respuesta of respuestas">
+                <button class="boton-respuesta" mat-raised-button [color]="colores(i)" (click)="respuestaUsuario(respuesta, i)">{{respuesta.description}}</button>
+            </ng-container>
+        </div>
+    </div>
+    <div class= "flex-container-botones">
+        <img src="{{urlIzq}}" *ngIf="usuarioRespuesta" class="boton-izq" (click)="closePregunta('volver')" alt="Boton Izq" id="botonIzq">
+        <img *ngIf="!reproduciendoSpeech" src="{{urlPlayAudio}}" class="boton-audio" (click)="setAudio()" alt="Boton Audio" id="botonAudio">
+        <img *ngIf="reproduciendoSpeech" src="{{urlMuteAudio}}" class="boton-audio" (click)="setAudio()" alt="Boton Audio" id="botonAudio">
+        <img src="{{urlDer}}" *ngIf="usuarioRespuesta" class="boton-der" (click)="closePregunta('der')" alt="Boton Der" id="botonDer">
+    </div>
+</div>

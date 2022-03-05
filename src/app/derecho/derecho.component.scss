@@ -1,0 +1,233 @@
+.flex-container-dialog {
+    display: flex;
+    flex-direction: column;
+    color: #8F06B5;
+    overflow: hidden;
+}
+
+.boton-close {
+	position: relative;
+	border: none;
+	background: transparent;
+	color: #8F06B5;
+	//cursor: pointer;
+	
+	&:focus {
+		outline: solid 0 transparent;
+	}
+	
+	&:before, &:after {
+		position: absolute;
+		top: 15%; left: calc(50% - .0625em);
+		width: 1px; 
+        height: 70%;
+		border-radius: .125em;
+		transform: rotate(45deg);
+		background: currentcolor;
+		content: ''
+	}
+	
+	&:after { transform: rotate(-45deg); }
+}
+
+.flex-container-derecho {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.2;
+    position: relative;
+    top: 31%;
+}
+
+.p-titulo-derecho {
+    text-align: center;
+    font-family: 'ConfigBold', 'arial', sans-serif;
+    margin-bottom: 0;
+    padding: 0 5vw 0 5vw;
+}
+
+.ul-texto-derecho {
+    text-align: justify;
+    overflow-y: auto; 
+    font-family: 'Config', 'arial', sans-serif;
+}
+
+.flex-container-botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 32%;
+}
+
+.esconder {
+    visibility: hidden;
+}
+
+// -------- MOBILE / TABLET -----------
+
+@media only screen and (max-width: 1080px) {
+    .flex-container-dialog {
+        height: 80vmax;
+        width: 80vmin;
+    }
+
+    .container-boton-close {
+        margin: 1.5vw 2vw 0 auto;
+    }
+
+    .boton-close {
+        height: 5vmax;
+        width: 4vmax; 
+    }
+    
+    // .flex-container-derecho {
+    //     top: 26vmax;
+    // }
+    
+    .p-titulo-derecho {
+        font-size: 6vmin;
+    }
+    
+    .ul-texto-derecho {
+        font-size: 4vmin;
+        margin: .9vmax 0 1.5vmax 0;
+        padding: 0 10vmin 0 10vmin;
+        height: 26.5vmax;
+    }
+
+    // .boton-volver {
+    //     width: 60vmin;
+    // }
+    
+    // .flex-container-botones {
+    //     top: 27vmax;
+    // }
+
+    .boton-izq {
+        margin: 0 auto 0 10vmin;
+        height: 8vmin;
+    }
+    
+    .boton-audio {
+        border-radius: 200px;
+        height: 8.5vmax;
+    }
+    
+    .boton-der {
+        margin: 0 10vmin 0 auto;
+        height: 8vmin;
+    }
+}
+
+// -------- DESKTOP -----------
+
+@media only screen and (min-width: 1081px) {
+    .flex-container-dialog {
+        height: 90vmin;
+        width: 53vmin;
+    }
+
+    .container-boton-close {
+        margin: 1vh 1vh 0 auto;
+    }
+
+    .boton-close {
+        height: 5.5vmin;
+        width: 5vmin; 
+    }
+    
+    // .flex-container-derecho {
+    //     top: 28vmin;
+    // }
+    
+    .p-titulo-derecho {
+        font-size: 3.6vmin;
+    }
+    
+    .ul-texto-derecho {
+        font-size: 2.7vmin;
+        margin: 1vmin 0 1.5vmin 0;
+        padding: 0 7vmin 0 7vmin;
+        height: 32vmin;
+    }
+    
+    // .boton-volver {
+    //     width: 41vmin;
+    // }
+    
+    // .flex-container-botones {
+    //     top: 29vmin;
+    // }
+    
+    .boton-izq {
+        margin: 0 auto 0 7vmin;
+        height: 5vmin;
+    }
+    
+    .boton-audio {
+        border-radius: 200px;
+        height: 9vmin;
+    }
+    
+    .boton-der {
+        margin: 0 7vmin 0 auto;
+        height: 5vmin;
+    }
+}
+
+@media only screen and (orientation:landscape) and (max-device-width: 1080px) {
+    .flex-container-dialog {
+        height: 90vmin;
+        width: 53vmin;
+    }
+
+    .container-boton-close {
+        margin: 0 1vh 0 auto;
+    }
+
+    .boton-close {
+        height: 5.5vmin;
+        width: 5vmin; 
+    }
+    
+    // .flex-container-derecho {
+    //     top: 28vmin;
+    // }
+    
+    .p-titulo-derecho {
+        font-size: 3.6vmin;
+    }
+    
+    .ul-texto-derecho {
+        font-size: 2.7vmin;
+        margin: 1vmin 0 1.5vmin 0;
+        padding: 0 7vmin 0 7vmin;
+        height: 32vmin;
+    }
+    
+    // .boton-volver {
+    //     width: 41vmin;
+    // }
+    
+    // .flex-container-botones {
+    //     top: 29vmin;
+    // }
+    
+    .boton-izq {
+        margin: 0 auto 0 7vmin;
+        height: 5vmin;
+    }
+    
+    .boton-audio {
+        border-radius: 200px;
+        height: 9vmin;
+    }
+    
+    .boton-der {
+        margin: 0 7vmin 0 auto;
+        height: 5vmin;
+    }
+}
+

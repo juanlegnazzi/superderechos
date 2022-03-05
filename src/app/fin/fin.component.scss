@@ -1,0 +1,349 @@
+.pyro {
+  background-repeat: no-repeat;
+  // background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  line-height: 1.2;
+}
+
+.container-texto {
+  text-align: center;
+  color: #091CAB;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.h1-flex-item {
+  display: flex;
+  align-items: end;
+  line-height: 1.2;
+  font-family: 'KomikaAxis', 'arial', sans-serif;
+  text-align: center;
+  position: relative;
+  top: 0;
+  margin: 0;
+  width: 90%;
+}
+
+.container-puntaje {
+  background-color: white;
+  width: 55%;
+  position: relative;
+  top: 8%;
+}
+
+.titulo-puntaje {
+  font-family: 'Config', 'arial', sans-serif;
+}
+
+.texto-puntaje {
+  font-family: 'ConfigBold', 'arial', sans-serif;
+}
+
+.texto-cant-preguntas {
+  font-family: 'Config', 'arial', sans-serif;
+  position: relative;
+  margin: 0;
+  top: 13%;
+  width: 55%;
+}
+
+.container-boton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 11%;
+}
+
+.boton-volver-a-jugar {
+  margin-top: auto;
+}
+
+.boton-audio {
+  position: relative;
+  top: 25%;
+}
+
+.esconder {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  .pyro {
+    background-image: url("../../assets/fin/fondo_1024x600.png");
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .pyro {
+    background-image: url("../../assets/fin/fondo_1920x1080.png");
+  }
+}
+
+
+// -------- MOBILE / TABLET -----------
+@media only screen and (max-width: 1080px) {
+  .pyro {
+    height: 100vmax;
+    width: 100vmin;
+  }
+  
+  .flex-container {
+    height: 100vmax;
+  }
+  
+  .h1-flex-item {
+    font-size: 9vmin;
+    height: 28vmin;
+  }
+  
+  .container-puntaje {
+    border-radius: 2vmin;
+  }
+  
+  .titulo-puntaje {
+    margin: 2vmin 0 0 0;
+    font-size: 5vmin;
+  }
+  
+  .texto-puntaje {
+    font-size: 9vmin;
+    margin-bottom: 2vmin;
+  }
+  
+  .texto-cant-preguntas {
+    font-size: 5vmin;
+  }
+  
+  .boton-volver-a-jugar {
+    width: 80vmin;
+  }
+
+  .boton-audio {
+    width: 16vmin;
+  }
+}
+
+// -------- DESKTOP -----------
+@media only screen and (min-width: 1081px) {
+  .pyro {
+    height: 100%;
+    width: 55vmin;
+    margin: 0 auto 0 auto;
+  }
+  
+  .flex-container {
+    height: 100%;
+    width: 55vmin;
+    margin: 0 auto 0 auto;
+  }
+  
+  .h1-flex-item {
+    font-size: 4.5vmin;
+    height: 18vmin;
+  }
+  
+  .container-puntaje {
+    border-radius: 1vmin;
+  }
+  
+  .titulo-puntaje {
+    margin: 1vmin 0 0 0;
+    font-size: 2.7vmin;
+  }
+  
+  .texto-puntaje {
+    font-size: 4.5vmin;
+    margin-bottom: 1vmin;
+  }
+  
+  .texto-cant-preguntas {
+    font-size: 2.8vmin;
+  }
+  
+  .boton-volver-a-jugar {
+    width: 41vmin;
+  }
+  
+  .boton-audio {
+    width: 9vmin;
+  }
+}
+
+@media only screen and (orientation:landscape) and (max-device-width: 1080px) {
+  .pyro {
+    height: 100%;
+    width: 55vmin;
+    margin: 0 auto 0 auto;
+  }
+  
+  .flex-container {
+    height: 100%;
+    width: 55vmin;
+    margin: 0 auto 0 auto;
+  }
+  
+  .h1-flex-item {
+    font-size: 4.5vmin;
+    height: 18vmin;
+  }
+  
+  .container-puntaje {
+    border-radius: 1vmin;
+  }
+  
+  .titulo-puntaje {
+    margin: 1vmin 0 0 0;
+    font-size: 2.7vmin;
+  }
+  
+  .texto-puntaje {
+    font-size: 4.5vmin;
+    margin-bottom: 1vmin;
+  }
+  
+  .texto-cant-preguntas {
+    font-size: 2.8vmin;
+  }
+  
+  .boton-volver-a-jugar {
+    width: 41vmin;
+  }
+  
+  .boton-audio {
+    width: 9vmin;
+  }
+}
+
+
+//Fuegos artificiales
+  
+// $particles: 50;
+// $width: 500;
+// $height: 500;
+
+// // Create the explosion...
+// $box-shadow: ();
+// $box-shadow2: ();
+// @for $i from 0 through $particles {
+//   $box-shadow: $box-shadow,
+//                random($width)-$width / 2 + px
+//                random($height)-$height / 1.2 + px
+//                hsl(random(360), 100, 50);
+//   $box-shadow2: $box-shadow2, 0 0 #fff
+// }
+// @mixin keyframes ($animationName) {
+//     @-webkit-keyframes #{$animationName} {
+//         @content;
+//     }
+
+//     @-moz-keyframes #{$animationName} {
+//         @content;
+//     }
+
+//     @-o-keyframes #{$animationName} {
+//         @content;
+//     }
+
+//     @-ms-keyframes #{$animationName} {
+//         @content;
+//     }
+
+//     @keyframes #{$animationName} {
+//         @content;
+//     }
+// }
+
+// @mixin animation-delay ($settings) {
+//     -moz-animation-delay: $settings;
+//     -webkit-animation-delay: $settings;
+//     -o-animation-delay: $settings;
+//     -ms-animation-delay: $settings;
+//     animation-delay: $settings;
+// }
+
+// @mixin animation-duration ($settings) {
+//     -moz-animation-duration: $settings;
+//     -webkit-animation-duration: $settings;
+//     -o-animation-duration: $settings;
+//     -ms-animation-duration: $settings;
+//     animation-duration: $settings;
+// }
+
+// @mixin animation ($settings) {
+//     -moz-animation: $settings;
+//     -webkit-animation: $settings;
+//     -o-animation: $settings;
+//     -ms-animation: $settings;
+//     animation: $settings;
+// }
+
+// @mixin transform ($settings) {
+//     transform: $settings;
+//     -moz-transform: $settings;
+//     -webkit-transform: $settings;
+//     -o-transform: $settings;
+//     -ms-transform: $settings;
+// }
+
+// .pyro > .before, .pyro > .after {
+//   position: absolute;
+//   width: 5px;
+//   height: 5px;
+//   border-radius: 50%;
+//   box-shadow: $box-shadow2;
+//   @include animation((1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards));
+// }
+    
+// .pyro > .after {
+//   @include animation-delay((1.25s, 1.25s, 1.25s));
+//   @include animation-duration((1.25s, 1.25s, 6.25s));
+// }
+        
+// @include keyframes(bang) {
+//   to {
+//     box-shadow:$box-shadow;
+//   }
+// }
+    
+// @include keyframes(gravity)  {
+//   to {
+//     @include transform(translateY(200px));
+//     opacity: 0;
+//   }
+// }
+    
+// @include keyframes(position) {
+//   0%, 19.9% {
+//     margin-top: 10%;
+//     margin-left: 40%;
+//   }
+//   20%, 39.9% {
+//     margin-top: 40%;
+//     margin-left: 30%;
+//   }
+//   40%, 59.9% {  
+//     margin-top: 20%;
+//     margin-left: 70%
+//   }
+//   60%, 79.9% {  
+//     margin-top: 30%;
+//     margin-left: 20%;
+//   }
+//   80%, 99.9% {  
+//     margin-top: 30%;
+//     margin-left: 80%;
+//   }
+// }

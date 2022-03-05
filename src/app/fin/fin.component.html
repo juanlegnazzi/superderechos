@@ -1,0 +1,23 @@
+<div class="pyro">
+    <!-- <div class="before"></div>
+    <div class="after"></div> -->
+    <div class="flex-container animate__animated animate__fadeInRight">
+        <!-- <div class="container-boton esconder">
+            <img src="{{urlVolver}}" alt="Boton Volver" class="boton-volver-a-jugar">
+            <img src="{{urlPlayAudio}}" class="boton-audio" alt="Boton Audio" >
+        </div> -->
+        <div class="container-texto">
+            <h1 class="h1-flex-item animate__animated animate__tada animate__delay-1s">{{titulo}}</h1>
+            <div class="container-puntaje">
+                <p class="titulo-puntaje">{{tituloPuntaje}}</p>
+                <p class="texto-puntaje">{{textoPuntaje}}</p>
+            </div>
+            <p class="texto-cant-preguntas">{{textoCantPreguntas}}</p>
+        </div>
+        <div class="container-boton">
+            <img src="{{urlVolver}}" alt="boton volver" (click)="volverInicio()" class="boton-volver-a-jugar">
+            <img *ngIf="!reproduciendoSpeech" src="{{urlPlayAudio}}" class="boton-audio" (click)="setAudio()" alt="Boton Audio" id="botonAudio">
+            <img *ngIf="reproduciendoSpeech" src="{{urlMuteAudio}}" class="boton-audio" (click)="setAudio()" alt="Boton Audio" id="botonAudio">
+        </div>
+    </div>
+</div>

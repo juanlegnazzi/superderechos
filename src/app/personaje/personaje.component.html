@@ -1,0 +1,13 @@
+<div id="personajeDiv" class="container animate__animated animate__backInUp">
+    <div class="flex-container">
+        <p [ngClass]="{'princesa-naturaleza' : (model?.id === 7), 'name' : (model?.id !== 7)}">{{model?.name}}</p>
+        <p class="skill"><span class="superPoder">Superpoder:</span> {{model?.skill}}</p>
+        <img src="{{urlDerechos}}" *ngIf="mostrarBotones" alt="Boton Derechos" class="boton-derechos" id="botonDerechos" (click)="abrirDialogDerechos()">
+    </div>
+    <div *ngIf="mostrarBotones" class="flex-container-button">
+        <img src="{{urlIzq}}" class="boton-izq" [ngClass]="{'esconder' : (model && model.id === 1)}" (click)="volverPersonaje()" alt="Boton Izq" id="botonIzq">
+        <img *ngIf="!reproduciendoAudio" src="{{urlPlayAudio}}" class="boton-audio" (click)="setAudio()" alt="Boton Audio" id="botonAudio">
+        <img *ngIf="reproduciendoAudio"src="{{urlMuteAudio}}" class="boton-audio" (click)="setAudio()" alt="Boton Audio" id="botonAudio">
+        <img src="{{urlDer}}" class="boton-der" (click)="siguientePersonaje()" alt="Boton Der" id="botonDer">
+    </div>
+</div>

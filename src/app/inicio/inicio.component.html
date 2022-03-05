@@ -1,0 +1,7 @@
+<div class="container animate__animated animate__backInDown" >
+  <div class="flex-container">
+    <p class="parrafo-nombre">¿Cuál es tu nombre?</p>
+    <input type="text" class="input-nombre common-class" [(ngModel)]="nombre" (ngModelChange)="comprobarString()" placeholder="Escribe tu nombre aqui">
+    <img src="assets/inicio/boton.png" alt="Boton Jugar" (click)="guardarNombreSessionStorage()" class="common-class" [ngClass]="{'boton-disabled': (nombre === '' || !parseIntNombre)}" >
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="flex-container-dialog" id="containerDialog">
+    <div class="container-boton-close">
+        <button  class="boton-close" (click) = "closeDerecho('volver')"></button>
+    </div>
+    <div class="flex-container-derecho">
+        <p class="p-titulo-derecho">Derechos: </p>
+        <ul class="ul-texto-derecho">
+            <ng-container *ngFor="let derecho of derechos">
+                <li>
+                    {{derecho}}
+                </li>
+            </ng-container>
+        </ul>
+        <!-- <img src="{{urlVolver}}" class="boton-volver" (click)="closeDerecho('volver')" alt="Boton Volver" id="botonVolver"> -->
+    </div>
+    <div class= "flex-container-botones">
+        <!-- <img src="{{urlIzq}}" class="boton-izq"  [ngClass]="{'esconder' : (personajeId === 1)}" (click)="closeDerecho('izq')" alt="Boton Izq" id="botonIzq"> -->
+        <img *ngIf="!reproduciendoAudio" src="{{urlPlayAudio}}" class="boton-audio" (click)="setAudio()" alt="Boton Audio" id="botonAudio">
+        <img *ngIf="reproduciendoAudio" src="{{urlMuteAudio}}" class="boton-audio" (click)="setAudio()" alt="Boton Audio" id="botonAudio">
+        <!-- <img src="{{urlDer}}" class="boton-der" (click)="closeDerecho('der')" alt="Boton Der" id="botonDer"> -->
+    </div>
+</div>
